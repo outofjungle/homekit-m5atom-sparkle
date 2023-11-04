@@ -3,12 +3,13 @@
 
 #include "HomeSpan.h"
 
+#define BUTTON_PIN 39
+
 struct SparkleButton : Service::StatelessProgrammableSwitch
 {
-
     SpanCharacteristic *switchEvent;
 
-    SparkleButton(int);
+    SparkleButton();
     void button(int, int) override;
 };
 

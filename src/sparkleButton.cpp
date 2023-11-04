@@ -1,11 +1,11 @@
 #include "sparkleButton.h"
 
-SparkleButton::SparkleButton(int buttonPin) : Service::StatelessProgrammableSwitch()
+SparkleButton::SparkleButton() : Service::StatelessProgrammableSwitch()
 {
     switchEvent = new Characteristic::ProgrammableSwitchEvent();
     new Characteristic::ServiceLabelIndex();
 
-    new SpanButton(buttonPin);
+    new SpanButton(BUTTON_PIN);
 }
 
 void SparkleButton::button(int pin, int pressType)

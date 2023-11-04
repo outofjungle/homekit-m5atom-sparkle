@@ -6,8 +6,6 @@
 #include "sparkleLight.h"
 #include "LedMatrix.h"
 
-#define BUTTON_PIN 39
-
 void setup()
 {
     Serial.begin(115200);
@@ -28,7 +26,7 @@ void setup()
     new Service::AccessoryInformation();
     new Characteristic::Identify();
     new Characteristic::Name(dev->SW());
-    new SparkleButton(BUTTON_PIN);
+    new SparkleButton();
 
     new SpanAccessory();
     new Service::AccessoryInformation();
